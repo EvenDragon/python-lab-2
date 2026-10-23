@@ -1,12 +1,13 @@
 import datetime
-from typing import Literal
 
 from pydantic import BaseModel, field_validator
+
+from streamstats.constants import LEVELS
 
 
 class Event(BaseModel):
     timestamp: datetime.datetime
-    level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
+    level: LEVELS
     source: str
     message: str
     @field_validator("source")
@@ -15,3 +16,6 @@ class Event(BaseModel):
         if not value.strip():
             raise ValueError("Source must not be empty")
         return value
+
+class SkippedEvent(BaseModel):
+    skipped: int = 0

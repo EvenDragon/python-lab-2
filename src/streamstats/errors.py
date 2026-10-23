@@ -7,10 +7,10 @@ class UnsupportedFormatError(StreamStatsError):
         super().__init__("Unsupported Format")
 
 class InvalidEventError(StreamStatsError):
-    pass
+    """Invalid Event"""
 
 class InvalidTimestampError(StreamStatsError):
-    pass
+    """Invalid Timestamp"""
 
 class CLIConfigError(StreamStatsError):
-    pass
+    """CLI Config Error"""
