@@ -1,12 +1,10 @@
-import datetime
-
-from pydantic import BaseModel, field_validator
+from pydantic import AwareDatetime, BaseModel, field_validator
 
 from streamstats.constants import LEVELS
 
 
 class Event(BaseModel):
-    timestamp: datetime.datetime
+    timestamp: AwareDatetime
     level: LEVELS
     source: str
     message: str

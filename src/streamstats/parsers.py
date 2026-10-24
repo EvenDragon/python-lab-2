@@ -22,8 +22,7 @@ def parse_files(files: list[str],format: str, skipped: SkippedEvent, skip_invali
     else:
         raise UnsupportedFormatError
     for path in files:
-        for event in parser(path, skipped, skip_invalid):
-            yield event
+        yield from parser(path, skipped, skip_invalid)
 
 def parse_jsonl(path: str, skipped: SkippedEvent, skip_invalid: bool = False) -> Iterator[Event]:
     """Generator. Parse jsonl file into Event"""

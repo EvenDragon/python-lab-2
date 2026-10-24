@@ -1,10 +1,30 @@
 {
-  "total": 0,
-  "by_level": {},
-  "by_source": {},
-  "first_event": null,
-  "last_event": null,
-  "top_error_sources": [],
-  "top_critical_sources": [],
-  "skipped_lines": 0
+  "total": 9,
+  "by_level": {
+    "INFO": 3,
+    "DEBUG": 2,
+    "ERROR": 2,
+    "WARNING": 1,
+    "CRITICAL": 1
+  },
+  "by_source": {
+    "app": 4,
+    "db": 4,
+    "api": 1
+  },
+  "first_event": "2026-10-24T12:00:00+03:00",
+  "last_event": "2026-10-24T13:04:00+03:00",
+  "top_error_sources": [
+    [
+      "db",
+      2
+    ]
+  ],
+  "top_critical_sources": [
+    [
+      "app",
+      1
+    ]
+  ],
+  "skipped_lines": 1
 }

@@ -119,11 +119,6 @@ Run all tests:
 uv run python -m pytest -v
 ```
 
-Run the configured checks before committing:
-
-```bash
-uvx pre-commit run --all-files
-```
 
 ### Few words about processing
 
